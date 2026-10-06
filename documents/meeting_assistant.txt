@@ -1,0 +1,5 @@
+The meeting assistant must generate a draft summary from meeting notes.
+
+The meeting assistant must ask for user confirmation before sending a summary.
+
+The meeting assistant must keep unresolved questions in a separate section.
