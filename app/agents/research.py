@@ -8,8 +8,9 @@ class ResearchAgent:
     def __init__(self, directory: Path):
         self.directory = directory
 
-    def run(self, state: AgentState) -> dict[str, object]:
-        sources = search_documents(state.topic, self.directory)
+    def run(self, state: AgentState, *, query: str | None = None) -> dict[str, object]:
+        search_query = state.topic if query is None else query
+        sources = search_documents(search_query, self.directory)
 
         return {
             "sources": sources,
